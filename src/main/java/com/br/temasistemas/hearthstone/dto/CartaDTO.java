@@ -1,23 +1,48 @@
 package com.br.temasistemas.hearthstone.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.br.temasistemas.hearthstone.model.Carta;
 
 public class CartaDTO {
 
+	private int id;
 	private String nome;
 	private String descricao;
 	private int ataque;
 	private int defesa;
 	private String tipo;
 	private String classe;
+
+
+	public CartaDTO() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	public CartaDTO(Carta carta) {
+		this.id = carta.getId();
 		this.nome = carta.getNome();
 		this.descricao = carta.getDescricao();
 		this.ataque = carta.getAtaque();
 		this.defesa = carta.getDefesa();
 	}
 	
+	public List<CartaDTO> getListaCartas(List<Carta> cartas) {
+		List<CartaDTO> cartasDTO = new ArrayList<CartaDTO>();
+		
+		cartas.stream().forEachOrdered(c -> cartasDTO.add(new CartaDTO(c)));
+		return cartasDTO;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public String getNome() {
 		return nome;
 	}
