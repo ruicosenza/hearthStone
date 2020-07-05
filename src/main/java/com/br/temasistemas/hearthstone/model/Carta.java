@@ -4,11 +4,18 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 
 import com.br.temasistemas.hearthstone.dto.CartaDTO;
+import com.br.temasistemas.hearthstone.enums.EClasseCarta;
+import com.br.temasistemas.hearthstone.enums.ETipoCarta;
 
 @Entity
 public class Carta implements Serializable {
@@ -21,16 +28,26 @@ public class Carta implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)	
 	private int id;
+	@NotBlank(message = "Nome é obrigatório")
 	@Column(nullable = false, unique = true)
 	private String nome;
+	@NotBlank(message = "Descrição é obrigatório")
 	@Column(nullable = false)
 	private String descricao;
 	@Column
+	@Min(0)
+	@Max(10)
 	private int ataque;
 	@Column
+	@Min(0)
+	@Max(10)
 	private int defesa;
 	@Column
-	private String tipoCarta;
+	@Enumerated(EnumType.STRING)
+	private ETipoCarta tipo;
+	@Column
+	@Enumerated(EnumType.STRING)
+	private EClasseCarta classe;
 	
 	public Carta() {
 	}
@@ -41,7 +58,14 @@ public class Carta implements Serializable {
 		this.descricao = cartaDTO.getDescricao();
 		this.ataque = cartaDTO.getAtaque();
 		this.defesa = cartaDTO.getDefesa();
-		this.tipoCarta = cartaDTO.getTipo();
+		this.tipo = ETipoCarta.valueOf(cartaDTO.getTipo().toUpperCase());
+		
+		if( cartaDTO.getClasse().equalsIgnoreCase("caçador") ) {
+			this.classe = EClasseCarta.valueOf("CACADOR");
+		} else {
+			this.classe = EClasseCarta.valueOf(cartaDTO.getClasse().toUpperCase());
+		}
+		
 	}
 
 	public int getId() {
@@ -84,11 +108,19 @@ public class Carta implements Serializable {
 		this.defesa = defesa;
 	}
 
-	public String getTipoCarta() {
-		return tipoCarta;
+	public ETipoCarta getTipo() {
+		return tipo;
 	}
 
-	public void setTipoCarta(String tipoCarta) {
-		this.tipoCarta = tipoCarta;
+	public void setTipo(ETipoCarta tipo) {
+		this.tipo = tipo;
+	}
+
+	public EClasseCarta getClasse() {
+		return classe;
+	}
+
+	public void setClasse(EClasseCarta classe) {
+		this.classe = classe;
 	}
 }
