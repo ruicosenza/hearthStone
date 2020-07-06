@@ -58,6 +58,18 @@ public class BaralhoController {
 		baralhoDTO = new BaralhoDTO(baralho.get());
 		return ResponseEntity.status(HttpStatus.OK).body(baralhoDTO);
 	}
+	
+	@GetMapping("/nome")
+	public ResponseEntity<BaralhoDTO> getByNome(@RequestParam(value = "nome") String nome) {
+		Optional<Baralho> baralho = repository.findByNome(nome);
+
+		if (!baralho.isPresent())
+			throw new BaralhoNotFoundException("classe-" + nome);
+
+		BaralhoDTO baralhoDTO = new BaralhoDTO(baralho.get());
+		
+		return ResponseEntity.status(HttpStatus.OK).body(baralhoDTO);
+	}
 
 	@GetMapping("/classe")
 	public ResponseEntity<List<BaralhoDTO>> getByClasse(@RequestParam(value = "classe") String classe) {
