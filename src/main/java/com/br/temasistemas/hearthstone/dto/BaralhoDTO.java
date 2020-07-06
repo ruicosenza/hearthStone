@@ -25,7 +25,7 @@ public class BaralhoDTO {
 		this.id = baralho.getId();
 		this.nome = baralho.getNome();
 		this.classe = baralho.getClasse().getClasse();
-		this.cartas = getListaCartasDTOBaralhoDTO(baralho.getCartas());
+		this.cartas = getListaCartasDTOBaralho(baralho.getCartas());
 	}
 
 	public int getId() {
@@ -53,21 +53,21 @@ public class BaralhoDTO {
 		this.cartas = cartas;
 	}
 	
-	public List<CartaDTO> getListaCartasDTOBaralhoDTO(List<Carta> cartas) {
+	public List<CartaDTO> getListaCartasDTOBaralho(List<Carta> cartas) {
 		List<CartaDTO> cartasDTO = new ArrayList<CartaDTO>();
 
 		cartas.stream().forEachOrdered(b -> cartasDTO.add(new CartaDTO(b)));
 		return cartasDTO;
 	}
 
-	public List<BaralhoDTO> getListaBaralhoDTO(List<Baralho> baralho) {
+	public List<BaralhoDTO> listaBaralhoDTO(List<Baralho> baralho) {
 		List<BaralhoDTO> baralhoDTO = new ArrayList<>();
 		
 		baralho.stream().forEachOrdered(b -> baralhoDTO.add(new BaralhoDTO(b)));
 		return baralhoDTO;
 	}
 
-	public List<Carta> getCartasFromCartasDTO() {
+	public List<Carta> cartasFromCartasDTO() {
 		List<Carta> cartas = new ArrayList<Carta>();
 		
 		this.getCartas().stream().forEach(c -> cartas.add(new Carta(c)));

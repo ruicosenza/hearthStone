@@ -60,22 +60,22 @@ public class CartaController {
 	public ResponseEntity<CartaDTO> getByNome(@RequestParam(value = "nome") String nome) {
 		CartaDTO cartaDTO = new CartaDTO();
 
-		Carta carta = repository.findByNome(nome);
+		Optional<Carta> carta = repository.findByNome(nome);
 
-		if (carta == null)
+		if (!carta.isPresent())
 			throw new CartaNotFoundException("nome-" + nome);
 
-		cartaDTO = new CartaDTO(carta);
+		cartaDTO = new CartaDTO(carta.get());
 
 		return ResponseEntity.status(HttpStatus.OK).body(cartaDTO);
 	}
 
 	@GetMapping("/classe")
 	public ResponseEntity<List<CartaDTO>> getByClasse(@RequestParam(value = "classe") String classe) {
-		if( classe.equalsIgnoreCase("caçador") ) {
+		if (classe.equalsIgnoreCase("caçador")) {
 			classe = "cacador";
 		}
-		
+
 		List<Carta> cartas = repository.findByClasse(EClasseCarta.valueOf(classe.toUpperCase()));
 
 		if (cartas.isEmpty())
@@ -104,17 +104,40 @@ public class CartaController {
 	public ResponseEntity<CartaDTO> save(@Valid @RequestBody CartaDTO cartaDTO, UriComponentsBuilder uriBuilder)
 			throws Exception {
 
-		Carta findByNome = repository.findByNome(cartaDTO.getNome());
+		Optional<Carta> findByNome = repository.findByNome(cartaDTO.getNome());
 
-		if (findByNome != null) {
+		if (findByNome.isPresent()) {
 			throw new CartaAlreadyReportedException("A carta já persistida: " + cartaDTO.getNome());
 		}
 
-		cartaDTO = new CartaDTO(repository.save(new Carta(cartaDTO)));
-		
+		Carta save = repository.save(new Carta(cartaDTO));
+		cartaDTO = new CartaDTO(save);
+
 		URI uri = uriBuilder.path("/carta/{id}").buildAndExpand(cartaDTO.getId()).toUri();
-		
+
 		return ResponseEntity.created(uri).body(cartaDTO);
+	}
+
+	@PostMapping("/addCartas")
+	public ResponseEntity<List<CartaDTO>> save(@Valid @RequestBody ArrayList<CartaDTO> cartasDTO,
+			UriComponentsBuilder uriBuilder) throws Exception {
+		List<CartaDTO> cartasDTORetorno = new ArrayList<CartaDTO>();
+		Optional<Carta> findByNome;
+		Carta save;
+
+		for (CartaDTO cartaDTO : cartasDTO) {
+
+			findByNome = repository.findByNome(cartaDTO.getNome());
+
+			if (!findByNome.isPresent()) {
+				save = repository.save(new Carta(cartaDTO));
+				cartaDTO = new CartaDTO(save);
+
+				cartasDTORetorno.add(cartaDTO);
+			}
+		}
+
+		return ResponseEntity.ok(cartasDTORetorno);
 	}
 
 	@GetMapping("/delete/{id}")

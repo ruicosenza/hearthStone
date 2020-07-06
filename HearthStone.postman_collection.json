@@ -1,0 +1,793 @@
+{
+	"info": {
+		"_postman_id": "808202d8-5709-4cb3-8069-f0b4c0a44089",
+		"name": "HearthStone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addBaralho 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"baralho 1\",\n    \"classe\": \"mago\",\n    \"cartas\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addBaralho 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"baralho 2\",\n    \"classe\": \"paladino\",\n    \"cartas\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addBaralho 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"baralho 3\",\n    \"classe\": \"Caçador\",\n    \"cartas\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addBaralho 4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"baralho 4\",\n    \"classe\": \"Druida\",\n    \"cartas\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addBaralho 5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"baralho 5\",\n    \"classe\": \"qualquer\",\n    \"cartas\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addBaralho 6",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"baralho 6\",\n    \"classe\": \"erro\",\n    \"cartas\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCarta 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"mago\",\n    \"descricao\": \"mago\",\n    \"ataque\": 10,\n    \"defesa\": 8,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/addCartas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						"addCartas"
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCarta 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"paladino\",\n    \"descricao\": \"paladino\",\n    \"ataque\": 10,\n    \"defesa\": 8,\n    \"tipo\": \"criatura\",\n    \"classe\": \"paladino\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCarta 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Caçador\",\n    \"descricao\": \"Caçador\",\n    \"ataque\": 10,\n    \"defesa\": 8,\n    \"tipo\": \"criatura\",\n    \"classe\": \"Caçador\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCarta 4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Druida\",\n    \"descricao\": \"Druida\",\n    \"ataque\": 10,\n    \"defesa\": 8,\n    \"tipo\": \"magia\",\n    \"classe\": \"Druida\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCarta 5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Qualquer\",\n    \"descricao\": \"Qualquer\",\n    \"ataque\": 10,\n    \"defesa\": 8,\n    \"tipo\": \"magia\",\n    \"classe\": \"Qualquer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCarta 6",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Qualquer_1\",\n    \"descricao\": \"Qualquer\",\n    \"ataque\": 10,\n    \"defesa\": 8,\n    \"tipo\": \"erroTipo\",\n    \"classe\": \"Qualquer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCarta 7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Qualquer_2\",\n    \"descricao\": \"Qualquer\",\n    \"ataque\": 10,\n    \"defesa\": 8,\n    \"tipo\": \"criatura\",\n    \"classe\": \"erroClasse\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCarta 8",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"mago_1\",\n    \"descricao\": \"carta 1\",\n    \"ataque\": -1,\n    \"defesa\": 8,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCarta 9",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"mago_2\",\n    \"descricao\": \"carta 1\",\n    \"ataque\": 11,\n    \"defesa\": 10,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCarta 10",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"mago_2\",\n    \"descricao\": \"carta 1\",\n    \"ataque\": 10,\n    \"defesa\": -1,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCarta 11",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"mago_2\",\n    \"descricao\": \"carta 1\",\n    \"ataque\": 10,\n    \"defesa\": 11,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "addCartas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n    \"nome\": \"mago_1\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_2\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_3\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_4\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_5\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_6\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_7\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_8\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_9\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_10\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_11\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_12\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_13\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_14\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_15\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_16\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_17\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_18\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_19\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_20\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_21\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_22\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_23\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_24\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_25\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_26\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_27\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_28\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_29\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_30\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_31\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n},\n{\n    \"nome\": \"mago_32\",\n    \"descricao\": \"mago\",\n    \"ataque\": 6,\n    \"defesa\": 6,\n    \"tipo\": \"criatura\",\n    \"classe\": \"mago\"\n}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/carta/addCartas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"carta",
+						"addCartas"
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "updateBaralho 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"baralho 1\",\n    \"classe\": \"mago\",\n    \"cartas\": [\n        {\n            \"nome\": \"mago_1\"\n        },\n        {\n            \"nome\": \"mago_2\"\n        },\n        {\n            \"nome\": \"mago_3\"\n        },\n        {\n            \"nome\": \"mago_4\"\n        },\n        {\n            \"nome\": \"mago_5\"\n        },\n        {\n            \"nome\": \"mago_6\"\n        },\n        {\n            \"nome\": \"mago_7\"\n        },\n        {\n            \"nome\": \"mago_8\"\n        },\n        {\n            \"nome\": \"mago_9\"\n        },\n        {\n            \"nome\": \"mago_10\"\n        },\n        {\n            \"nome\": \"mago_11\"\n        },\n        {\n            \"nome\": \"mago_12\"\n        },\n        {\n            \"nome\": \"mago_13\"\n        },\n        {\n            \"nome\": \"mago_14\"\n        },\n        {\n            \"nome\": \"mago_15\"\n        },\n        {\n            \"nome\": \"mago_16\"\n        },\n        {\n            \"nome\": \"mago_17\"\n        },\n        {\n            \"nome\": \"mago_18\"\n        },\n        {\n            \"nome\": \"mago_19\"\n        },\n        {\n            \"nome\": \"mago_20\"\n        },\n        {\n            \"nome\": \"mago_21\"\n        },\n        {\n            \"nome\": \"mago_22\"\n        },\n        {\n            \"nome\": \"mago_23\"\n        },\n        {\n            \"nome\": \"mago_24\"\n        },\n        {\n            \"nome\": \"mago_25\"\n        },\n        {\n            \"nome\": \"mago_26\"\n        },\n        {\n            \"nome\": \"mago_27\"\n        },\n        {\n            \"nome\": \"mago_28\"\n        },\n        {\n            \"nome\": \"mago_29\"\n        },\n        {\n            \"nome\": \"mago_30\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "updateBaralho 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"baralho 2\",\n    \"classe\": \"paladino\",\n    \"cartas\": [\n        {\n            \"nome\": \"paladino\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "updateBaralho 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"baralho 3\",\n    \"classe\": \"Caçador\",\n    \"cartas\": [\n        {\n            \"nome\": \"carta_inexistente\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "updateBaralho 3_1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"baralho 3\",\n    \"classe\": \"Caçador\",\n    \"cartas\": [\n        {\n            \"nome\": \"Caçador\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "updateBaralho inexistente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"baralho_inexistente\",\n    \"classe\": \"DRUIDA\",\n    \"cartas\": [\n        {\n            \"nome\": \"mago\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						""
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBaralho 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/delete/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						"delete",
+						"2"
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBaralho inexistente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baralho/delete/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baralho",
+						"delete",
+						"8"
+					]
+				},
+				"description": "Api para CRUD de cartas e baralhos do Jogo HearthStone"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

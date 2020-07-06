@@ -31,7 +31,8 @@ public class Baralho implements Serializable {
 	@Column
 	@Enumerated(EnumType.STRING)
 	private EClasseCarta classe;
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "id")
+	@Column
+	@OneToMany(fetch = FetchType.EAGER)
 	private List<Carta> cartas;
 	
 	public Baralho() {
@@ -48,7 +49,7 @@ public class Baralho implements Serializable {
 			this.classe = EClasseCarta.valueOf(baralhoDTO.getClasse().toUpperCase());
 		}
 		
-		this.cartas = baralhoDTO.getCartasFromCartasDTO();
+		this.cartas = baralhoDTO.cartasFromCartasDTO();
 	}
 
 	public int getId() {

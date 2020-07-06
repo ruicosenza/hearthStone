@@ -1,12 +1,17 @@
 package com.br.temasistemas.hearthstone.dto;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.br.temasistemas.hearthstone.model.Carta;
 
-public class CartaDTO {
+public class CartaDTO implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5447278331687701149L;
 	private int id;
 	private String nome;
 	private String descricao;
