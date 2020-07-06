@@ -24,6 +24,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import com.br.temasistemas.hearthstone.dto.BaralhoDTO;
 import com.br.temasistemas.hearthstone.dto.CartaDTO;
 import com.br.temasistemas.hearthstone.enums.EClasseCarta;
+import com.br.temasistemas.hearthstone.exception.BaralhoLimiteCartasException;
 import com.br.temasistemas.hearthstone.exception.BaralhoNotFoundException;
 import com.br.temasistemas.hearthstone.model.Baralho;
 import com.br.temasistemas.hearthstone.model.Carta;
@@ -116,6 +117,10 @@ public class BaralhoController {
 			if (findById.isPresent()) {
 				cartas.add(findById.get());
 			}
+		}
+		
+		if( cartas.size() > 30 ) {
+			throw new BaralhoLimiteCartasException("Limite de cartas em um baralho é de 30 cartas");
 		}
 
 		if (findByNome.isPresent()) {
